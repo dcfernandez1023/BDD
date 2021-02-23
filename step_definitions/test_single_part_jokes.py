@@ -27,7 +27,7 @@ def joke_response(category, joke_type):
 @pytest.fixture
 @then('the response contains a category of "<response_category>", a joke type of "<response_joke_type>", and the joke '
       'itself')
-def test_programming_jokes_response_data(joke_response, response_category, response_joke_type):
+def test_joke_response_data(joke_response, response_category, response_joke_type):
     # actual
     json_response = joke_response.json()
     # check actual vs expected for category
@@ -44,6 +44,6 @@ def test_programming_jokes_response_data(joke_response, response_category, respo
 # tests that the response status code from the jokes api was success (200)
 @pytest.fixture
 @then("the response status code is 200")
-def test_programming_jokes_response_success(joke_response):
+def test_joke_response_success(joke_response):
     # check actual vs expected and assert
     assert joke_response.status_code == 200

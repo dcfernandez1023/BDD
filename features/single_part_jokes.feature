@@ -10,7 +10,7 @@ Feature: Single-Part Jokes
 
     # parameters for test cases
     # these are all the possible single-part joke categories that the api supports
-    Examples: Two-Part Jokes
+    Examples: Single-Part Jokes
       | category      | joke_type    | response_category  | response_joke_type |
       | Programming   | single       | Programming        | single             |
       | Misc          | single       | Misc               | single             |
